@@ -3,6 +3,8 @@
 </asp:Content>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <script src="../../js/sweetalert.min.js" type="text/javascript"></script>
+    <link href="../../css/sweetalert.css" rel="stylesheet" type="text/css"/>
     <form id="form" runat="server">
     <div class="mx-auto mt-5">
         <%-- Primer seccion --%>

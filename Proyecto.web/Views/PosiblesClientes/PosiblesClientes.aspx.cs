@@ -71,16 +71,15 @@ namespace Proyecto.web.Views.PosiblesClientes
                 Controllers.clsPosiblesClientesController obclsPosiblesClientesController = new Controllers.clsPosiblesClientesController();
 
                 if (string.IsNullOrEmpty(lblOpcion.Text)) lblOpcion.Text = "1";
-              
 
-                ClientScript.RegisterStartupScript(this.GetType(), "mensaje", "<script> alert('" + obclsPosiblesClientesController.setAdministrarPosiblesClientesController(obclsPosiblesClientes,Convert.ToInt32(lblOpcion.Text)) + "')</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "mensaje", "<script>swal('Error!','" + obclsPosiblesClientesController.setAdministrarPosiblesClientesController(obclsPosiblesClientes, Convert.ToInt32(lblOpcion.Text)) + "!','error')</script>");
                 lblOpcion.Text = txtIdentificacion.Text = txtEmpresa.Text = txtPrimerNombre.Text = txtSegundoNombre.Text = txtPrimerApellido.Text = txtSegundoApellido.Text = txtxDireccion.Text = txtTelefono.Text = txtCorreo.Text = string.Empty;
 
                 getPosiblesClientes();
             }
             catch(Exception ex)
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "mensaje", "<script> alert('" + ex.Message + "')</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "mensaje", "<script>swal('Error!','" + ex.Message + "!','error')</script>");
 
             }
         }
@@ -124,8 +123,8 @@ namespace Proyecto.web.Views.PosiblesClientes
 
                     Controllers.clsPosiblesClientesController obclsPosiblesClientesController = new Controllers.clsPosiblesClientesController();
 
-
-                    ClientScript.RegisterStartupScript(this.GetType(), "mensaje", "<script> alert('" + obclsPosiblesClientesController.setAdministrarPosiblesClientesController(obclsPosiblesClientes, Convert.ToInt32(lblOpcion.Text)) + "')</script>");
+                    obclsPosiblesClientesController.setAdministrarPosiblesClientesController(obclsPosiblesClientes, Convert.ToInt32(lblOpcion.Text));
+                    ClientScript.RegisterStartupScript(this.GetType(), "mensaje", "<script>swal('Error!','" + obclsPosiblesClientesController.setAdministrarPosiblesClientesController(obclsPosiblesClientes, Convert.ToInt32(lblOpcion.Text)) + "!','error')</script>");
                     lblOpcion.Text = string.Empty;
                     getPosiblesClientes();
                 }
@@ -133,7 +132,8 @@ namespace Proyecto.web.Views.PosiblesClientes
             }
             catch (Exception ex)
             {
-                ClientScript.RegisterStartupScript(this.GetType(), "mensaje", "<script> alert('" + ex.Message + "')</script>");
+                ClientScript.RegisterStartupScript(this.GetType(), "mensaje", "<script>swal('Error!','" + ex.Message + "!','error')</script>");
+
 
             }
         }
