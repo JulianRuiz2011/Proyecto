@@ -126,7 +126,7 @@
                                 <ItemStyle HorizontalAlign="Center" />
                             </asp:TemplateField>
                             <%-- eliminar  --%>
-                            <asp:TemplateField HeaderText="Editar">
+                            <asp:TemplateField HeaderText="Eliminar">
                                 <ItemTemplate>
                                     <asp:ImageButton ID="ibEliminar" runat="server" ImageUrl="~/Resources/Images/eliminar.png" CommandName="Eliminar" CommandArgument="<%# ((GridViewRow)Container).RowIndex%>" />
                                 </ItemTemplate>
