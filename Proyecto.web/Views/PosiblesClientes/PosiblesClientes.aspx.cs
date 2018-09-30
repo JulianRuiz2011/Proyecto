@@ -89,7 +89,8 @@ namespace Proyecto.web.Views.PosiblesClientes
             try
             {
                 int inIndice = Convert.ToInt32(e.CommandArgument);
-                if (e.CommandName.Equals("Editer"))
+
+                if (e.CommandName.Equals("Editar"))
                 {
                     lblOpcion.Text = "2";
                     //accede a un control web dentro de un grid

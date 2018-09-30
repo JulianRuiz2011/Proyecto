@@ -20,10 +20,7 @@ namespace Proyecto.Logica.BL
             stConexion = obclsConexion.getConexion();
 
         }
-        public bool getvalidarUsuario(object obclsUsuarios)
-        {
-            throw new NotImplementedException();
-        }
+
         /// <summary>
         /// CONSULTA POSIBLES CLIENTES
         /// </summary>
